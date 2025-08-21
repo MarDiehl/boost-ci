@@ -10,7 +10,7 @@
 # This workflow uses the Boost.CI reusable workflow but it tests what happens if
 # all of the default large section jobs are disabled.  This action should yield
 # all top level jobs as skipped.
-# 
+#
 ---
 name: Test.NoJobs.CI
 
@@ -18,7 +18,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - MarDiehl/test-Intel-tmp
       - develop
       - bugfix/**
       - feature/**
@@ -32,7 +32,7 @@ on:
 jobs:
   call-neutered-boost-ci:
     name: Run Boost.CI
-    uses: boostorg/boost-ci/.github/workflows/reusable.yml@master
+    uses: MarDiehl/boost-ci/.github/workflows/reusable.yml@MarDiehl/test-Intel-tmp
     with:  # disable all four major job options
       enable_posix: false
       enable_windows: false

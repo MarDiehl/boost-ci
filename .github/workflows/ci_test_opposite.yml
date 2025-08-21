@@ -10,7 +10,7 @@
 # This workflow uses the Boost.CI reusable workflow but it tests the reverse of all
 # the default options to make sure handling of the options is correct.  The major
 # job categories are all enabled so the full matrix of options is tested.
-# 
+#
 ---
 name: Test.Opposite.CI
 
@@ -18,7 +18,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - MarDiehl/test-Intel-tmp
       - develop
       - bugfix/**
       - feature/**
@@ -32,7 +32,7 @@ on:
 jobs:
   call-neutered-boost-ci:
     name: Run Boost.CI
-    uses: boostorg/boost-ci/.github/workflows/reusable.yml@master
+    uses: MarDiehl/boost-ci/.github/workflows/reusable.yml@MarDiehl/test-Intel-tmp
     with:  # negates the defaults for options that do not disable entire job categories
       branch_coverage: false
       enable_32bit: false

@@ -12,7 +12,7 @@
 #
 # To use it, copy this file into your repository as `.github/workflows/ci.yml` and
 # customize it appropriately.
-# 
+#
 ---
 name: Boost.CI
 
@@ -20,7 +20,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - MarDiehl/test-Intel-tmp
       - develop
       - bugfix/**
       - feature/**
@@ -35,7 +35,7 @@ on:
 jobs:
   call-boost-ci:
     name: Run Boost.CI
-    uses: boostorg/boost-ci/.github/workflows/reusable.yml@master
+    uses: MarDiehl/boost-ci/.github/workflows/reusable.yml@MarDiehl/test-Intel-tmp
     # Example of customization:
     # with:
     #   enable_reflection: true

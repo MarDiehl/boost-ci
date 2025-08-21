@@ -321,8 +321,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel-tmp
           path: boost-ci-cloned
 
       - name: Get CI scripts folder
@@ -332,7 +332,7 @@ jobs:
             rm -rf boost-ci-cloned
 
       - name: Install packages
-        if: startsWith(matrix.os, 'ubuntu')
+        if: ${{ startsWith(matrix.os, 'ubuntu') && !startsWith(matrix.compiler, 'icpx') }}
         run: |
             SOURCE_KEYS=("${{join(matrix.source_keys, '" "')}}")
             SOURCES=("${{join(matrix.sources, '" "')}}")
@@ -514,7 +514,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: boostorg/boost-ci
-          ref: MarDiehl/test-Intel
+          ref: MarDiehl/test-Intel-tmp
           path: boost-ci-cloned
       - name: Get CI scripts folder
         run: |
@@ -634,8 +634,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel-tmp
           path: boost-ci-cloned
       - name: Get CI scripts folder
         run: |
@@ -692,8 +692,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel-tmp
           path: boost-ci-cloned
 
       - name: Get CI scripts folder
