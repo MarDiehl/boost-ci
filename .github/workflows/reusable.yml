@@ -321,8 +321,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel
           path: boost-ci-cloned
 
       - name: Get CI scripts folder
@@ -518,7 +518,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: boostorg/boost-ci
-          ref: master
+          ref: MarDiehl/test-Intel
           path: boost-ci-cloned
       - name: Get CI scripts folder
         run: |
@@ -638,8 +638,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel
           path: boost-ci-cloned
       - name: Get CI scripts folder
         run: |
@@ -696,8 +696,8 @@ jobs:
       - name: Fetch Boost.CI
         uses: actions/checkout@v4
         with:
-          repository: boostorg/boost-ci
-          ref: master
+          repository: MarDiehl/boost-ci
+          ref: MarDiehl/test-Intel
           path: boost-ci-cloned
 
       - name: Get CI scripts folder
